@@ -1,1 +1,17 @@
 theme: jekyll-theme-slate
+
+name: Sweet Pumpkin Croquet
+
+url: "http://localhost:4000"
+
+baseurl: ""
+
+timezone: Asia/Seoul
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+
+disqus: blog-jasondongkyukim
