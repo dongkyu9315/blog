@@ -1,8 +1,8 @@
 name: Sweet Pumpkin Croquet
 
-url: "http://blog.jasondongkyukim.me"
+url: "http://jasondongkyukim.me"
 
-baseurl: ""
+baseurl: "/blog"
 
 description: Jason's Blog powered by Jekyll
 
@@ -13,7 +13,7 @@ author:
     linkedin: dongkyu9315
     bio: A Software Developer
 
-highlighter: pygments
+highlighter: rouge
 
 disqus: sweet-pumpkin-croquet
 
