@@ -1,13 +1,13 @@
 ---
-title: "Testing post link"
+title: "Sample Post"
 layout: post
-description: "This is placeholder post"
-categories: [general, demo]
-tags: [tip, first]
+description: "This is a sample post"
+categories: [Sample, Demo]
+tags: [tip, markdown]
 comments: true
 ---
 
-## third post
+## Sample Post in Drafts
 
 ### Markdown
 
