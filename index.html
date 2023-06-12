@@ -1,0 +1,70 @@
+---
+title: Sweet Pumpkin Croquette
+layout: page
+---
+
+{% if paginator.page == 1 or page.previous == nil %}
+<article>
+    <h3>I am a software developer living in Korea. The main purpose of this blog is to motivate myself to study new stuff and to share them with those who may find them interesting and useful. Thus, this blog will be used as my personal notebook of what I study and find interesting. Hopefully, you will enjoy!</h3>
+</article>
+{% endif %}
+
+{% for post in paginator.posts %}
+<article class="home">
+    <span class="post-date">
+    {% assign d = post.date | date: "%d" | plus:'0' %}
+        {{ post.date | date: "%B" }}
+    {% case d %}
+    {% when 1 or 21 or 31 %}{{ d }}st,
+    {% when 2 or 22 %}{{ d }}nd,
+    {% when 3 or 23 %}{{ d }}rd,
+    {% else %}{{ d }}th,
+    {% endcase %}
+    {{ post.date | date: "%Y" }}
+    </span>
+
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+    <div>
+    {% if post.description %}
+        {{ post.description }}
+    {% endif %}
+    </div>
+</article>
+{% endfor %}
+
+<hr/>
+
+<ul class="pager">
+{% if paginator.previous_page %}
+    <li class="previous">
+    {% if paginator.previous_page == 1 %}
+        <a href="{{ site.baseurl }}/">&larr; Newer</a>
+    {% else %}
+        <a href="{{ site.baseurl }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
+    {% endif %}
+    </li>
+{% else %}
+    <li class="previous disabled">
+        <a>&larr; Newer</a>
+    </li>
+{% endif %}
+{% if page.previous == nil %}
+    <li>
+        <span class="page_number">Page: 0 of 0</span>
+    </li>
+{% else %}
+    <li>
+        <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    </li>
+{% endif %}
+{% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ site.baseurl }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}">Older &rarr;</a>
+    </li>
+{% else %}
+    <li class="next disabled">
+        <a>Older &rarr;</a>
+    </li>
+{% endif %}
+</ul>

@@ -1,0 +1,34 @@
+name: Sweet Pumpkin Croquette
+
+url: "https://dongkyu9315.github.io"
+
+baseurl: "/blog"
+
+description: Jason's Blog powered by Jekyll
+
+author:
+    name: Dongkyu Kim
+    email: jasonkim.softdev@gmail.com
+    homepage: https://dongkyu9315.github.io
+    github: dongkyu9315
+    linkedin: dongkyu9315
+    bio: A Software Developer
+
+highlighter: rouge
+
+disqus: sweet-pumpkin-croquette
+
+paginate: 4
+paginate_path: "page:num"
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+timezone: Asia/Seoul
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
